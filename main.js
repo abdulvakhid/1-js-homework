@@ -41,16 +41,21 @@
 // })
 
 
-var elMoney = +prompt("Qancha pulingiz bor?");
-var elTicket = 500 * 11000;
-var elHotel = 250 * 11000;
-var elMuseum = 120 * 12200;
+var Money = +prompt("Qancha pulingiz bor?");
+var Ticket = 500;
+var Hotel = 250;
+var Museum = 120;
+
+var Dollar = 10950;
+var Euro = 12220;
+
+var sumDollar = (Ticket+Hotel) * Dollar;
+var sumEuro = Museum * Euro;
+
 var elspan = document.querySelector(".js-span");
-var result = elTicket + elHotel + elMuseum;
+var result = sumDollar + sumEuro;
 
-// console.log(result);
-
-if (elMoney > result) {
+if (Money > result) {
     elspan.textContent = ("Oq yo'l");
 } else {
     elspan.textContent = ("UYDA QOL")
